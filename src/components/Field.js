@@ -4,7 +4,7 @@ import Radio from './Radio';
 import Date from './Date';
 import Phone from './Phone';
 
-class FieldComponet extends Component {
+class Field extends Component {
   constructor(props) {
     super(props);
 
