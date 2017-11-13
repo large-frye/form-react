@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+body,
+.form-group,
+.form-control,
+input {
+  font-size: 12px !important;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
