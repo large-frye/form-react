@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import FieldComponent from './components/FieldComponent';
+import Field from './components/Field';
 import { Form, Button } from 'reactstrap';
 import MockForm from './static/mockForm.json';
 
@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   render() {
-    const Fields = MockForm.fields.map((field) => <FieldComponent field={field} onUpdate={(event) => this.updateData(event)}/>);
+    const Fields = MockForm.fields.map((field) => <Field field={field} onUpdate={(event) => this.updateData(event)}/>);
 
     return (
       <div className="container-fluid" style={{ marginTop: '50px' }}>
