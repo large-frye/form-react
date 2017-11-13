@@ -3,38 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import FieldComponent from './components/FieldComponent';
 import { Form, Button } from 'reactstrap';
-
-const MockForm = {
-  fields: [
-    {
-      type: 'Text',
-      value: '',
-      label: 'Who is your favorite person',
-      id: 'text_1',
-      name: 'text_1'
-    },
-    {
-      type: 'Radio',
-      options: [{ label: 'Yes', value: 'yes'}, { label: 'No', value: 'no' }],
-      value: '', // maybe not needed
-      label: 'Choose one',
-      id: 'radio_1',
-      name: 'radio_1'
-    },
-    {
-      type: 'Date',
-      label: 'What is your birthday',
-      id: 'date_1',
-      name: 'date_1'
-    },
-    {
-      type: 'Phone',
-      label: 'Your phone #',
-      id: 'phone_1',
-      name: 'phone_1'
-    }
-  ]
-};
+import MockForm from './static/mockForm.json';
 
 const marginTop = { marginTop: '50px' };
 
