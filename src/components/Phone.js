@@ -20,16 +20,10 @@ export default class Phone extends Component {
     const allowedKeyCodes = [8, 9, 27, 46]; // backspace, tab, escape, delete
 
     if (val.length >= limit && allowedKeyCodes.indexOf(event.keyCode) === -1) {
-
-      if (val.length === limit) {
-        // this.updatePhone(event);
-      }
-      
       this.setDisplayAlert(limit);
       event.preventDefault();
     } else {
       this.setDisplayAlert();
-      //this.updatePhone(event);
     }
   }
 
@@ -70,14 +64,14 @@ export default class Phone extends Component {
         <Label className="col-sm-2">{this.props.dynamicProps.label}</Label>
         <div>
           <Input type="number" className="col-sm-2" style={numberStyle} name={this.props.dynamicProps.name + '_area'}
-            onKeyDown={(event) => this.confirmPhone(event, 3)} onChange={(event) => this.updatePhone(event)} />
-          <Input type="number" className="col-sm-2" style={numberStyle} 
-            onChange={(event) => this.updatePhone(event)} name={this.props.dynamicProps.name + '_mid'}
-            onKeyDown={(event) => this.confirmPhone(event, 3)} />
-          <Input type="number" className="col-sm-2" style={numberStyle} 
-            onChange={(event) => this.updatePhone(event)} name={this.props.dynamicProps.name + '_end'}
-            onKeyDown={(event) => this.confirmPhone(event, 4)} />
-
+            onKeyDown={(event) => this.confirmPhone(event, 3)} 
+            onChange={(event) => this.updatePhone(event)} />
+          <Input type="number" className="col-sm-2" style={numberStyle} name={this.props.dynamicProps.name + '_mid'}
+            onKeyDown={(event) => this.confirmPhone(event, 3)}
+            onChange={(event) => this.updatePhone(event)} />
+          <Input type="number" className="col-sm-2" style={numberStyle} name={this.props.dynamicProps.name + '_end'}
+            onKeyDown={(event) => this.confirmPhone(event, 4)} 
+            onChange={(event) => this.updatePhone(event)} />
           {DisplayAlert}
         </div>
       </FormGroup>
