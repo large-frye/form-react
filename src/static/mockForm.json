@@ -5,7 +5,8 @@
       "value": "",
       "label": "Who is your favorite person",
       "id": "text_1",
-      "name": "text_1"
+      "name": "text_1",
+      "required": true
     },
     {
       "type": "Radio",
@@ -23,6 +24,23 @@
       "label": "Choose one",
       "id": "radio_1",
       "name": "radio_1"
+    },
+    {
+      "type": "Checkbox",
+      "options": [
+        {
+          "label": "Taylor",
+          "value": true
+        },
+        {
+          "label": "Andrew",
+          "value": true
+        }
+      ],
+      "value": "",
+      "label": "Choose one",
+      "id": "checkbox_1",
+      "name": "checkbox_1"
     },
     {
       "type": "Date",

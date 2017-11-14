@@ -3,6 +3,7 @@ import Text from './Text';
 import Radio from './Radio';
 import Date from './Date';
 import Phone from './Phone';
+import Checkbox from './Checkbox';
 
 class FieldComponet extends Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class FieldComponet extends Component {
       Text: { component: Text, props: this.props.field, callback: this.props.onUpdate },
       Radio: { component: Radio, props: this.props.field, callback: this.props.onUpdate },
       Date: { component: Date, props: this.props.field, callback: this.props.onUpdate },
-      Phone: { component: Phone, props: this.props.field, callback: this.props.onUpdate }
+      Phone: { component: Phone, props: this.props.field, callback: this.props.onUpdate },
+      Checkbox: { component: Checkbox, props: this.props.field, callback: this.props.onUpdate }
     }
   }
 
