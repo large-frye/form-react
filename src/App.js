@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import FieldComponent from './components/FieldComponent';
+import Field from './components/Field';
 import { Form, Button } from 'reactstrap';
 import MockForm from './static/mockForm.json';
 

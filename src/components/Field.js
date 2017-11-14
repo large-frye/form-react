@@ -5,7 +5,7 @@ import Date from './Date';
 import Phone from './Phone';
 import Checkbox from './Checkbox';
 
-class FieldComponet extends Component {
+class Field extends Component {
   constructor(props) {
     super(props);
 
