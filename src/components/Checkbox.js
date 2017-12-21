@@ -28,16 +28,16 @@ export default class Checkbox extends Component {
   }
 
   render() {
-    const checkboxes = this.props.dynamicProps.options.map((option) => {
+    const checkboxes = this.props.dynamicProps.options.map((option, index) => {
       return (
-        <div className="form-check form-check-inline">
+        <div className="form-check form-check-inline" key={index}>
           <Label className="form-check-label">
-            <Input type="checkbox" style={checkboxStyle}
+            <Input type="checkbox" style={checkboxStyle} id={this.props.dynamicProps.name + '_' + index}
               name={this.props.dynamicProps.name} onClick={(event) => this.updateCheckboxState(event, option.label)} />{option.label}
           </Label>
         </div>
       );
-    })
+    });
 
     return (
       <FormGroup className="row col-sm-12">

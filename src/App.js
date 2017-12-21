@@ -31,24 +31,13 @@ class App extends Component {
 
   checkRequired() {
     const currentState = this.state;
-    const fields = MockForm.fields
+    const fields = MockForm.fields;
 
     MockForm.fields.forEach((field) => {
       if (typeof this.state.formData[field.name] === 'undefined' && field.required) {
         console.log(field);
       }
     });
-
-    // Object.keys(currentState.formData).forEach((key) => {
-    //   const value = currentState.formData[key];
-    //   const hasValue = !!hasValue;
-    //   const field = MockForm.fields.filter((field) => field.name === key);
-
-    //   if (field.required && !hasValue) {
-    //     console.log(field);
-    //   }
-    //   // if (!hasValue && MockForm.)
-    // });
   }
 
   save() {
@@ -58,7 +47,7 @@ class App extends Component {
   }
 
   render() {
-    const Fields = MockForm.fields.map((field) => <FieldComponent field={field} showRequired={this.state.required} onUpdate={(event) => this.updateData(event)}/>);
+    const Fields = MockForm.fields.map((field) => <Field field={field} showRequired={this.state.required} onUpdate={(event) => this.updateData(event)}/>);
 
     return (
       <div className="container-fluid" style={{ marginTop: '50px' }}>

@@ -4,8 +4,9 @@ import Radio from './Radio';
 import Date from './Date';
 import Phone from './Phone';
 import Checkbox from './Checkbox';
+import Time from './Time';
 
-class Field extends Component {
+export default class Field extends Component {
   constructor(props) {
     super(props);
 
@@ -14,7 +15,8 @@ class Field extends Component {
       Radio: { component: Radio, props: this.props.field, callback: this.props.onUpdate },
       Date: { component: Date, props: this.props.field, callback: this.props.onUpdate },
       Phone: { component: Phone, props: this.props.field, callback: this.props.onUpdate },
-      Checkbox: { component: Checkbox, props: this.props.field, callback: this.props.onUpdate }
+      Checkbox: { component: Checkbox, props: this.props.field, callback: this.props.onUpdate },
+      Time: { component: Time, props: this.props.field, callback: this.props.onUpdate }
     }
   }
 
@@ -23,5 +25,3 @@ class Field extends Component {
     return <DynamicComponent.component dynamicProps={DynamicComponent.props} callback={DynamicComponent.callback}/>;
   }
 }
-
-export default FieldComponet;

@@ -53,6 +53,11 @@
       "label": "Your phone #",
       "id": "phone_1",
       "name": "phone_1"
+    }, {
+      "type": "Time",
+      "label": "The time",
+      "id": "time_1",
+      "name": "time_1"
     }
   ]
 }
